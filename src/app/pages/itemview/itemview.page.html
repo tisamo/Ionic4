@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="/categories"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding *ngIf="item">
+
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title>{{item.label}}</ion-card-title>
+    </ion-card-header>
+      <ion-img [src]="item.image"></ion-img>
+    <ion-card-content >
+      <pre class="unselectable">{{item | json}}</pre>
+      <h3>{{ item.label }}</h3>
+      <p class="unselectable">{{ item.text }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+<ion-content padding *ngIf="!item">
+  <button routerLink="/categories">back</button>
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title>Nincs ilyen item</ion-card-title>
+    </ion-card-header>
+    <ion-img [src]="item.image"></ion-img>
+    <ion-card-content >
+      nincs ilyen
+    </ion-card-content>
+  </ion-card>
+</ion-content>

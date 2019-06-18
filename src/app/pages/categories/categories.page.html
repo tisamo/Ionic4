@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+           <ion-back-button routerLink=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-searchbar [(ngModel)]="searchKey"
+                       (ngModelChange)="updateList($event)"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let category of items; let i = index;" >
+     <ion-card>
+      <ion-card-header>
+          <a [routerLink]="'/itemview/'+category.id" routerDirection="forward" (click)="getItem(i)">
+            <ion-card-title><p>{{category.label}}</p></ion-card-title>
+          </a>
+      </ion-card-header>
+        <ion-img [src]=category.image></ion-img>
+      <ion-card-content>
+       <p class="unselectable">{{category.text}}</p>
+      </ion-card-content>
+      </ion-card>
+
+    </ion-item>
+
+
+  </ion-list>
+    <ion-img id="hiddenimage" src="https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg"></ion-img>
+</ion-content>
