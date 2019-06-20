@@ -1,0 +1,53 @@
+  {
+    "categories": [
+      {
+        "id": 0,
+        "name": "Gyümölcsök",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 1,
+        "name": "Zöldség",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 2,
+        "name": "Magvak",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 3,
+        "name": "Takarmány",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 4,
+        "name": "Méz",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 5,
+        "name": "Pálinka",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 6,
+        "name": "Szőlők",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      },
+      {
+        "id": 7,
+        "name": "Borok",
+        "image": "assets/img/ionic4start-ico.png",
+        "categoryIds": [2]
+      }
+    ]
+  }
+

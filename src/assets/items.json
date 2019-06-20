@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "label": "Narancs",
+      "image": "assets/image/méz.jpg",
+      "categoryIds": [0, 1]
+    },
+    {
+      "id": 1,
+      "image": "assets/image/méz.jpg",
+      "label": "Zöldségek",
+      "categoryIds": [1]
+    },
+    {
+      "id": 2,
+      "image": "assets/image/méz.jpg",
+      "label": "Eper",
+      "categoryIds": [1]
+    },
+    {
+      "id": 3,
+      "image": "assets/img/méz.jpg",
+      "label": "Kolompér",
+      "categoryIds": [2]
+    },
+    {
+      "id": 4,
+      "image": "assets/img/méz.jpg",
+      "label": "Kolompér",
+      "categoryIds": [2]
+    },
+    {
+      "id": 5,
+      "image": "assets/img/méz.jpg",
+      "label": "Pityóka",
+      "categoryIds": [2]
+    },
+    {
+     "id": 6,
+      "image": "assets/image/méz.jpg",
+      "label": "Rebarbara",
+      "categoryIds": [2]
+    }
+  ]
+}

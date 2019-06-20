@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>items</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-virtual-scroll [items]="">
+    <ion-item-divider *virtualHeader="let header" style="height: 60px;"  >
+      {{ header }}
+    </ion-item-divider>
+    <ion-item *virtualItem="let item ; let i = index;" >
+      <ion-card>
+        <ion-card-header>
+          <a [routerLink]="'/itemview/'+item.id" routerDirection="forward">
+            <ion-card-title>{{item.label}}  </ion-card-title>
+          </a>
+        </ion-card-header>
+        <ion-img class="ion-img"[src]=item.image></ion-img>
+        <ion-card-content class="unselectable">{{item.text}}</ion-card-content>
+      </ion-card>
+
+    </ion-item>
+  </ion-virtual-scroll>
+  <ion-img id="hiddenimage" src="https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg"></ion-img>
+</ion-content>
