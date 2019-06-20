@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'categories', loadChildren: './pages/categories/categories.module#CategoriesPageModule' },
   { path: 'vegetableitemview', loadChildren: './vegetableitemview/vegetableitemview.module#VegetableitemviewPageModule' },
   { path: 'itemview/:id', loadChildren: './pages/itemview/itemview.module#ItemviewPageModule' },
+  { path: 'items', loadChildren: './pages/items/items.module#ItemsPageModule' },
 ];
 
 @NgModule({

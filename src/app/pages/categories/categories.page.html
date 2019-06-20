@@ -7,29 +7,28 @@
     </ion-toolbar>
     <ion-toolbar color="dark">
         <ion-searchbar [(ngModel)]="searchKey"
-                       (ngModelChange)="updateList($event)"></ion-searchbar>
+                       (ngModelChange)="updateList()"></ion-searchbar>
     </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let category of items; let i = index;" >
-     <ion-card>
+  <ion-virtual-scroll [items]="items">
+      <ion-item-divider *virtualHeader="let header"  >
+          {{ header }}
+      </ion-item-divider>
+    <ion-item *virtualItem="let item ; let i = index;" >
+     <ion-card class="tocenter">
       <ion-card-header>
-          <a [routerLink]="'/itemview/'+category.id" routerDirection="forward" (click)="getItem(i)">
-            <ion-card-title><p>{{category.label}}</p></ion-card-title>
+          <a [routerLink]="'/itemview/'+item.id" routerDirection="forward" (click)="getItem(i)">
+            <ion-card-title>{{item.label}}  </ion-card-title>
           </a>
       </ion-card-header>
-        <ion-img [src]=category.image></ion-img>
-      <ion-card-content>
-       <p class="unselectable">{{category.text}}</p>
-      </ion-card-content>
+        <ion-img class="ion-img"[src]=item.image></ion-img>
+      <ion-card-content class="unselectable">{{item.text}}</ion-card-content>
       </ion-card>
 
     </ion-item>
+  </ion-virtual-scroll>
 
-
-  </ion-list>
-    <ion-img id="hiddenimage" src="https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg"></ion-img>
 </ion-content>
