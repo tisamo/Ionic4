@@ -21,7 +21,7 @@ import {Observable} from 'rxjs';
 import {forEach} from '@angular-devkit/schematics';
 
 
-interface CategoryRo {
+interface CategoriesRo {
     categories: Array<HomeCategories>;
 }
 
@@ -52,16 +52,12 @@ export class HomeResultsPage {
                 private categservice: CategoryarrayserviceService,
                 private http: HttpClient) {
         this.initItems();
-        this.getArray();
-    }
 
-    getArray() {
         this.http.get('assets/items.json').subscribe((response: Everyitem) => {
             this.everyItems = response.items;
         });
     }
-
-    filterArray(index) {
+    filterItemsByIndex(index) {
         const selected = this.items[index];
         const filteredList = this.everyItems.filter(
             function (e) {
@@ -71,7 +67,7 @@ export class HomeResultsPage {
     }
 
     initItems() {
-        this.http.get('assets/categories.json').subscribe((response: CategoryRo) => {
+        this.http.get('assets/categories.json').subscribe((response: CategoriesRo) => {
             this.items = response.categories;
             console.log(this.items[0].image);
         });
