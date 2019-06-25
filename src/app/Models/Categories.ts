@@ -1,4 +1,4 @@
-export class HomeCategories {
+export class Categories {
     private _id: number;
     private _name: string;
     private _image: string;

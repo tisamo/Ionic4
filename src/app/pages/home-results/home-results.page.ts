@@ -13,16 +13,16 @@ import {SearchFilterPage} from '../../pages/modal/search-filter/search-filter.pa
 import {ImagePage} from './../modal/image/image.page';
 // Call notifications test by Popover and Custom Component.
 import {NotificationsComponent} from './../../components/notifications/notifications.component';
-import {HomeCategories} from '../../Modells/HomeCategories';
+import {Categories} from '../../Models/Categories';
 import {Contact} from '../../../Category';
-import {CategoryarrayserviceService} from '../../Services/categoryarrayservice.service';
+import {CategoryService} from '../../Services/categoryarrayservice.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {forEach} from '@angular-devkit/schematics';
 
 
 interface CategoriesRo {
-    categories: Array<HomeCategories>;
+    categories: Array<Categories>;
 }
 
 interface Everyitem {
@@ -38,7 +38,7 @@ export class HomeResultsPage {
     searchKey = '';
     yourLocation = '123 Test Street';
     themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
-    items: HomeCategories[] = [];
+    items: Categories[] = [];
     //  everyItems: Contact[] = [];
     everyItems: any;
 
@@ -49,7 +49,7 @@ export class HomeResultsPage {
                 public alertCtrl: AlertController,
                 public modalCtrl: ModalController,
                 public toastCtrl: ToastController,
-                private categservice: CategoryarrayserviceService,
+                private categservice: CategoryService,
                 private http: HttpClient) {
         this.initItems();
 

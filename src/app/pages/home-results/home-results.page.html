@@ -18,12 +18,12 @@
 
 <ion-content padding>
     <ion-virtual-scroll [items]="items">
-        <ion-item-divider *virtualHeader="let header">
+        <ion-item-divider *virtualHeader="">
             {{ header }}
         </ion-item-divider>
 
-        <ion-item *virtualItem="let item ; let i = index;">
-            <ion-card class="tocenter" [routerLink]="'/categories'" routerDirection="forward" (click)="filterArray(i)">
+        <ion-item *virtualItem="let item; let i = index;">
+            <ion-card class="tocenter" [routerLink]="'/categories'" routerDirection="forward" (click)="filterItemsByIndex(i)">
                 <ion-card-header>
 
                     <ion-card-title>{{item.name}}</ion-card-title>

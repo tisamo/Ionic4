@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {ItemServiceService} from '../../Services/item-service.service';
 import {debug} from 'util';
 import {ZoldsegszervízService} from '../../Services/zoldsegszervíz.service';
-import {CategoryarrayserviceService} from '../../Services/categoryarrayservice.service';
+import {CategoryarrayserviceService, CategoryService} from '../../Services/categoryarrayservice.service';
 import {HttpClient} from '@angular/common/http';
 
 
@@ -20,7 +20,7 @@ export class CategoriesPage implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private itemServiceService: ItemServiceService,
-                private service: CategoryarrayserviceService,
+                private service: CategoryService,
                 private http: HttpClient) {
         this.items = service.filteredList;
     }
