@@ -43,16 +43,14 @@ export class HomeResultsPage {
     everyItems: any;
 
 
-    constructor(
-        public navCtrl: NavController,
-        public menuCtrl: MenuController,
-        public popoverCtrl: PopoverController,
-        public alertCtrl: AlertController,
-        public modalCtrl: ModalController,
-        public toastCtrl: ToastController,
-        private categservice: CategoryarrayserviceService,
-        private http: HttpClient
-    ) {
+    constructor(public navCtrl: NavController,
+                public menuCtrl: MenuController,
+                public popoverCtrl: PopoverController,
+                public alertCtrl: AlertController,
+                public modalCtrl: ModalController,
+                public toastCtrl: ToastController,
+                private categservice: CategoryarrayserviceService,
+                private http: HttpClient) {
         this.initItems();
         this.getArray();
     }

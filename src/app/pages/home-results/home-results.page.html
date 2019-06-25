@@ -1,39 +1,39 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button color="secondary"></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-        <ion-text color="light">
-          <ion-text color="light" class="fw700">Home</ion-text>
-        </ion-text>
-    </ion-title>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-text color="light">
+                <ion-text color="light" class="fw700">Home</ion-text>
+            </ion-text>
+        </ion-title>
 
-  </ion-toolbar>
-  <ion-toolbar color="dark">
-    <ion-searchbar [(ngModel)]="searchKey"
-    (ngModelChange)="searchInList()"></ion-searchbar>
-  </ion-toolbar>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-searchbar [(ngModel)]="searchKey"
+                       (ngModelChange)="searchInList()"></ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-virtual-scroll [items]="items">
-    <ion-item-divider *virtualHeader="let header" >
-      {{ header }}
-    </ion-item-divider>
+    <ion-virtual-scroll [items]="items">
+        <ion-item-divider *virtualHeader="let header">
+            {{ header }}
+        </ion-item-divider>
 
-    <ion-item *virtualItem="let item ; let i = index;"  >
-      <ion-card class="tocenter" [routerLink]="'/categories'" routerDirection="forward" (click)="filterArray(i)" >
-        <ion-card-header>
+        <ion-item *virtualItem="let item ; let i = index;">
+            <ion-card class="tocenter" [routerLink]="'/categories'" routerDirection="forward" (click)="filterArray(i)">
+                <ion-card-header>
 
-            <ion-card-title>{{item.name}}  </ion-card-title>
+                    <ion-card-title>{{item.name}}</ion-card-title>
 
-        </ion-card-header>
-        <ion-img class="ion-img"[src]=item.image></ion-img>
+                </ion-card-header>
+                <ion-img class="ion-img" [src]=item.image></ion-img>
 
-      </ion-card>
+            </ion-card>
 
-    </ion-item>
-  </ion-virtual-scroll>
+        </ion-item>
+    </ion-virtual-scroll>
 
 </ion-content>

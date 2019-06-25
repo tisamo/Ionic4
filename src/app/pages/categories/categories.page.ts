@@ -25,6 +25,7 @@ export class CategoriesPage implements OnInit {
         this.items = service.filteredList;
         console.log(this.items);
     }
+
     updateList() {
         const key = this.searchKey.trim().toLowerCase();
         if (key === '') {
@@ -32,7 +33,7 @@ export class CategoriesPage implements OnInit {
         } else {
             this.items = this.items.filter(x => x.label.toLowerCase().indexOf(key) !== -1);
             if (this.items.length < 1) {
-                this.showhidden();
+                this.showHidden();
             }
         }
     }
@@ -44,7 +45,7 @@ export class CategoriesPage implements OnInit {
         return relevantItem;
     }
 
-    showhidden() {
+    showHidden() {
         const element = document.getElementById('hiddenimage');
         element.style.visibility = 'visible';
     }
