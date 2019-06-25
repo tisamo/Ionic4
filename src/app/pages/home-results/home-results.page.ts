@@ -54,10 +54,10 @@ export class HomeResultsPage {
         private http: HttpClient
     ) {
         this.initItems();
-        this.getarray();
+        this.getArray();
     }
 
-    getarray() {
+    getArray() {
         this.http.get('assets/items.json').subscribe((response: Everyitem) => {
             this.everyItems = response.items;
         });
