@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {HomeCategories} from '../Modells/HomeCategories';
+import {Categories} from '../Models/Categories';
 import {Contact} from '../../Category';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryarrayserviceService {
+export class CategoryService {
 
   constructor() { }
   fajta: number[];

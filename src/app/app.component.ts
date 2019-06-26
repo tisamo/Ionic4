@@ -24,7 +24,7 @@ export class AppComponent {
     this.appPages = [
       {
         title: 'Home',
-        url: '/home-results',
+        url: '/home',
         direct: 'root',
         icon: 'home'
       },
@@ -44,7 +44,7 @@ export class AppComponent {
       */
       {
         title: 'Categories',
-        url: '/categories',
+        url: '/categoryitems',
         direct: 'forward',
         icon: 'paper'
       }

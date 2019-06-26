@@ -42,7 +42,7 @@ export class RegisterPage implements OnInit {
 
     loader.present();
     loader.onWillDismiss().then(() => {
-      this.navCtrl.navigateRoot('/home-results');
+      this.navCtrl.navigateRoot('/home');
     });
   }
 

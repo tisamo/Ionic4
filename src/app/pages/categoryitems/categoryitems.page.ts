@@ -4,16 +4,16 @@ import {ActivatedRoute} from '@angular/router';
 import {ItemServiceService} from '../../Services/item-service.service';
 import {debug} from 'util';
 import {ZoldsegszervízService} from '../../Services/zoldsegszervíz.service';
-import {CategoryarrayserviceService, CategoryService} from '../../Services/categoryarrayservice.service';
+import {CategoryService, CategoryService} from '../../Services/categoryservice';
 import {HttpClient} from '@angular/common/http';
 
 
 @Component({
-    selector: 'app-categories',
-    templateUrl: './categories.page.html',
-    styleUrls: ['./categories.page.scss'],
+    selector: 'app-categoryitems',
+    templateUrl: './categoryitems.page.html',
+    styleUrls: ['./categoryitems.page.scss'],
 })
-export class CategoriesPage implements OnInit {
+export class CategoryItemsPage implements OnInit {
     public items: Contact[] = [];
     private itemIndex: number;
     searchKey: string;

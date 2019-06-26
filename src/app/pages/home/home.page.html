@@ -23,7 +23,7 @@
         </ion-item-divider>
 
         <ion-item *virtualItem="let item; let i = index;">
-            <ion-card class="tocenter" [routerLink]="'/categories'" routerDirection="forward" (click)="filterItemsByIndex(i)">
+            <ion-card class="tocenter" [routerLink]="'/categoryitems'" routerDirection="forward" (click)="filterItemsByIndex(i)">
                 <ion-card-header>
 
                     <ion-card-title>{{item.name}}</ion-card-title>

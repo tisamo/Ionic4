@@ -15,7 +15,7 @@ import {ImagePage} from './../modal/image/image.page';
 import {NotificationsComponent} from './../../components/notifications/notifications.component';
 import {Categories} from '../../Models/Categories';
 import {Contact} from '../../../Category';
-import {CategoryService} from '../../Services/categoryarrayservice.service';
+import {CategoryService} from '../../Services/categoryservice';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {forEach} from '@angular-devkit/schematics';
@@ -30,11 +30,11 @@ interface Everyitem {
 }
 
 @Component({
-    selector: 'app-home-results',
-    templateUrl: './home-results.page.html',
-    styleUrls: ['./home-results.page.scss']
+    selector: 'app-home',
+    templateUrl: './home.page.html',
+    styleUrls: ['./home.page.scss']
 })
-export class HomeResultsPage {
+export class HomePage {
     searchKey = '';
     yourLocation = '123 Test Street';
     themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';

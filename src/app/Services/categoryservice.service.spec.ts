@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CategoryarrayserviceService } from './categoryarrayservice.service';
+import { CategoryarrayserviceService } from './categoryservice';
 
 describe('CategoryarrayserviceService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
